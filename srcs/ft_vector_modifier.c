@@ -26,6 +26,19 @@ static void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
+t_vector	*ft_vector_copy(t_vector *dst, t_vector *src)
+{
+	size_t	buf_size;
+
+	if (src->len > dst->cap)
+		return (NULL);
+	buf_size = src->data_size * src->len;
+	ft_memcpy(dst->data, src->data, buf_size);
+	dst->end = (char *)dst->data + buf_size;
+	dst->len = src->len;
+	return (dst);
+}
+
 int	ft_vector_pop_back(t_vector *vector, void *data)
 {
 	if (ft_vector_is_empty(vector) == true)
@@ -44,17 +57,4 @@ int	ft_vector_push_back(t_vector *vector, const void *data)
 	vector->end += vector->data_size;
 	vector->len += 1;
 	return (VECTOR_SUCCESS);
-}
-
-t_vector	*ft_vector_copy(t_vector *dst, t_vector *src)
-{
-	size_t buf_size;
-
-	if (src->len > dst->cap)
-		return (NULL);
-	buf_size = src->data_size * src->len;
-	ft_memcpy(dst->data, src->data, buf_size);
-	dst->end = (char *)dst->data + buf_size;
-	dst->len = src->len;
-	return (dst);
 }

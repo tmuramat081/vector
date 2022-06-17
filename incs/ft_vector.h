@@ -42,7 +42,7 @@ void		ft_vector_clear(t_vector *vector);
 
 // ********** Operator ********** //
 void		*ft_vector_operator(t_vector *vector, size_t n);
-void		*ft_vector_begin(t_vector *vector);
+void		*ft_vector_front(t_vector *vector);
 void		*ft_vector_back(t_vector *vector);
 
 // ********** Capacity ********** //

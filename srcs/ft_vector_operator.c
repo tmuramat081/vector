@@ -20,7 +20,7 @@ void	*ft_vector_operator(t_vector *vector, size_t n)
 	return (itr);
 }
 
-void	*ft_vector_begin(t_vector *vector)
+void	*ft_vector_front(t_vector *vector)
 {
 	if (!vector->data)
 		return (NULL);
