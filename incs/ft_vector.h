@@ -41,9 +41,9 @@ int			ft_vector_pop_back(t_vector *vector, void *data);
 void		ft_vector_clear(t_vector *vector);
 
 // ********** Operator ********** //
-void		*ft_vector_operator(t_vector *vector, size_t n);
 void		*ft_vector_front(t_vector *vector);
 void		*ft_vector_back(t_vector *vector);
+void		*ft_vector_next(t_vector *vector, void *it, size_t n);
 
 // ********** Capacity ********** //
 bool		ft_vector_is_full(t_vector *vector);
@@ -51,7 +51,6 @@ bool		ft_vector_is_empty(t_vector *vector);
 int			ft_vector_realloc(t_vector *deuqe);
 
 // ********** Other utils ********** //
-t_vector	*ft_vector_copy(t_vector *dst, t_vector *src);
 void		ft_vector_foreach(t_vector *vector, void (*func)(void *));
 void		ft_vector_status(t_vector *vector);
 

@@ -5,7 +5,7 @@ CC := gcc
 SRCS := \
 	ft_vector_init.c \
 	ft_vector_modifier.c \
-	ft_vector_operator.c \
+	ft_vector_iterator.c \
 	ft_vector_check.c \
 	ft_vector_realloc.c \
 	ft_vector_delete.c

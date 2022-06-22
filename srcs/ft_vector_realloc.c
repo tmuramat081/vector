@@ -54,6 +54,6 @@ int	ft_vector_realloc(t_vector *vector)
 		return (VECTOR_FAILURE);
 	vector->data = new_ptr;
 	vector->cap = new_cap;
-	vector->end = (char *)vector->data + (vector->len * vector->data_size);
+	vector->end = (char *)vector->data + vector->len * vector->data_size;
 	return (VECTOR_SUCCESS);
 }
